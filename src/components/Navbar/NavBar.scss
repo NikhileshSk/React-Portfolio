@@ -1,0 +1,91 @@
+.navbar{
+    background-color: var(--green-theme-nav-background-color);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+.navbar__container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: inherit;
+    padding: 0px 20px;
+}
+
+.navbar__container__logo{
+    color: var( --green-theme-main-color);
+    cursor: pointer;
+}
+
+   
+.navbar__container__menu {
+    display: flex;
+    list-style: none;
+    text-align: center;
+    z-index: 999; /* Ensure the menu stays above other elements */
+}
+    
+
+
+.nav-icon{
+    display: none;
+}
+.navbar__container__menu__item{
+    line-height: 40px;
+    margin-right: 1.5rem;
+    font-size: 1.6rem;
+}
+
+
+.navbar__container__menu__item::after{
+    content: '';
+    display: block;
+    height: 3px; /* The height of the underline */
+    width: 0; /* Initial width of the underline */
+    background: var(--green-theme-main-color); /* The color of the underline */
+    transition: width 0.5s ease; /* Smooth transition for width */
+}
+
+.navbar__container__menu__item:hover::after{
+    width: 100%; /* Full width on hover */
+    background: var(--green-theme-main-color); /* Ensure background color remains the same */
+}
+.navbar__container__menu__item__links{
+    text-decoration: none;
+    color: var(--green-theme-main-color);
+}
+
+// mediaquerrys
+
+@media only screen and (max-width : 768px){
+    .navbar__container__menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        &.active{
+            background: #181818;
+            left: 0px;
+            opacity: 1;
+        }
+    }
+    .nav-icon{
+        display: block;
+        cursor: pointer;
+        color: var(--green-theme-main-color);
+        padding-right: 20px;
+    }
+    .navbar__container__menu__item{
+        border-bottom: 1px solid black;
+        margin: 8px;
+        padding: 20px 0px;
+    }
+
+}

@@ -1,0 +1,129 @@
+.about {
+    display: flex;
+    flex-direction: column; // Make the section stack vertically
+    align-items: center; // Center items horizontally
+    padding: 20px; // Add some padding around the section
+  }
+  
+  .about__content {
+    display: flex; // Create a flex container
+    justify-content: space-between; // Distribute space between children
+    align-items: flex-start; // Align items at the start
+    width: 100%; // Make it full width
+    max-width: 1200px; // Optional max-width for larger screens
+    margin: 0 auto; // Center the container
+  }
+  
+  .about__text {
+    flex: 1; // Allow text to take up available space
+    margin-right: 20px; // Add space between text and image
+  
+    h3 {
+      font-size: 30px; // Heading size
+      margin-bottom: 10px; // Space below heading
+      color: #999999; // Text color
+    }
+  
+    p {
+      font-size: 20px; // Paragraph size
+      line-height: 1.5; // Improve readability
+      color: #666; // Text color
+    }
+  }
+  
+  .about__image {
+    flex: 1; // Allow image to take up available space
+    display: flex; // Center the image container
+    justify-content: center; // Center horizontally
+    align-items: center; // Center vertically
+    position: relative; // Position relative for overlay
+    overflow: hidden; // Hide overflow to keep overlay within the image bounds
+    transition: transform 0.3s; // Smooth transition for hover effect
+  
+    img {
+      max-width: 100%; // Make the image responsive
+      height: 400px; // Maintain aspect ratio
+      border-radius: 8px; // Add rounded corners
+  
+      &:hover {
+        transform: scale(1.05); // Scale up on hover
+        cursor: pointer; // Change cursor to pointer
+      }
+    }
+  }
+  
+  @media screen and (max-width: 550px) {
+    .about__content {
+      flex-direction: column; // Stack items vertically on smaller screens
+      width: 100%; // Full width on small screens
+    }
+  
+    .about__text {
+      margin-right: 0; // Remove right margin
+      text-align: center; // Center text for smaller screens
+  
+      h3 {
+        font-size: 30px; // Adjust heading size for smaller screens
+      }
+  
+      p {
+        font-size: 18px; // Adjust paragraph size for smaller screens
+      }
+    }
+  
+    .about__image {
+      margin-top: 20px; // Add margin above image on small screens
+    }
+  }
+  
+  @media only screen and (min-width: 551px) and (max-width: 768px) {
+    .about__content {
+      flex-direction: column; // Keep items in a row for medium screens
+      width: 100%; // Maintain full width
+    }
+  
+    .about__text {
+      h3 {
+        font-size: 36px; // Adjust heading size for medium screens
+      }
+  
+      p {
+        font-size: 18px; // Adjust paragraph size for medium screens
+      }
+    }
+  }
+  
+  @media only screen and (min-width: 769px) and (max-width: 990px) {
+    .about__content {
+      width: 100%; // Set width for medium-large screens
+      align-items: center; // Center items vertically for better alignment
+    }
+  
+    .about__text {
+      h3 {
+        font-size: 28px; // Adjust heading size for larger screens
+      }
+  
+      p {
+        font-size: 20px; // Maintain paragraph size
+      }
+    }
+  }
+  
+  @media only screen and (min-width: 991px) {
+    .about__content {
+      width: 100%; // Set width for large screens
+      align-items: center; // Align items at the start for large screens
+    }
+  
+    .about__text {
+      h3 {
+        font-size: 30px; // Heading size for large screens
+      }
+  
+      p {
+        font-size: 22px; // Paragraph size for large screens
+      }
+    }
+  }
+  

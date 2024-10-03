@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--black-bg);
+  color: var(--text-color);
+}
+
+.skills-section {
+  padding: 50px;
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--black-bg);
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0px 10px 20px var(--shadow-color);
+}
+
+.skills-header {
+  text-align: center;
+  color: var(--green-theme-main-color);
+}
+
+.skills-header h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.skills-header p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Display 4 cards in a row */
+  gap: 30px;
+}
+
+.skill-card {
+  background-color: var(--card-bg);
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px var(--shadow-color);
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+}
+
+.skill-card p {
+  margin-top: 10px;
+  color: var(--green-theme-main-color);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Sidebar skills label */
+.skills-container::before {
+  content: 'Skills';
+  position: absolute;
+  top: 50%;
+  left: -50px;
+  transform: rotate(-90deg);
+  font-size: 1.5rem;
+  color: var(--green-theme-main-color);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Medium screens (Tablets, etc.) */
+@media (max-width: 992px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
+  }
+  .skills-header h2 {
+    font-size: 2.5rem; /* Adjust font size for smaller screens */
+  }
+  .skills-header p {
+    font-size: 1rem;
+  }
+}
+
+/* Small screens (Mobile devices) */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(1, 1fr); /* 1 card per row on smaller screens */
+  }
+  .skills-header h2 {
+    font-size: 2rem; /* Further adjust font size */
+  }
+  .skills-header p {
+    font-size: 0.9rem;
+  }
+}

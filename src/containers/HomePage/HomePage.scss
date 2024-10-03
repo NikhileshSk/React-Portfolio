@@ -1,0 +1,87 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background-color: var(--background-color); // Make sure to define the variable in your global styles
+  color: white;
+  text-align: center;
+
+  &__text-wrapper {
+    margin-bottom: 20px;
+
+    h1 {
+      font-size: 5rem;
+      line-height: 1.2;
+      animation: fadeIn 2s ease-out;
+
+      span {
+        color: var(--green-theme-main-color); // Using the green theme color
+      }
+    }
+  }
+
+  &__contact-me {
+    button {
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      background-color: var(--green-theme-main-color);
+      border: 1px solid black;
+      color: #333;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #333;
+        color: var(--green-theme-main-color);
+      }
+    }
+  }
+}
+
+// Fade-in animation for the text
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Media Queries for responsiveness
+@media only screen and (max-width: 550px) {
+  .home__text-wrapper h1 {
+    font-size: 2.5rem;
+  }
+
+  .home__contact-me button {
+    padding: 8px 15px;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 551px) and (max-width: 768px) {
+  .home__text-wrapper h1 {
+    font-size: 4rem;
+  }
+
+  .home__contact-me button {
+    padding: 9px 18px;
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 990px) {
+  .home__text-wrapper h1 {
+    font-size: 4.5rem;
+  }
+
+  .home__contact-me button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+  }
+}

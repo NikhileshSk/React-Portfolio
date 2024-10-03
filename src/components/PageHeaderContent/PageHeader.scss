@@ -1,0 +1,26 @@
+.page-header {
+    display: flex;
+    align-items: center; // Align the icon vertically with the text
+    justify-content: space-between;
+    padding: 20px;
+    h2 {
+      margin-right: 10px; // Space between text and icon
+      font-size: 3rem; // Adjust the text size as needed
+      color: var(--green-theme-main-color);
+    }
+  
+    &__icon {
+      display: inline-block;
+      font-size: 1rem; // Icon size can be adjusted here as well
+      color: var(--green-theme-main-color);
+    }
+  }
+  .line {
+    border: none; // Remove the default border
+    height: 2px; // Define the height of the line
+    background-color: var(--green-theme-main-color); // Use your custom color or a hex code
+    margin-top: 5px; // Optional: adjust spacing around the line
+    width: 100%; // Optional: make it full width
+  }
+
+  
